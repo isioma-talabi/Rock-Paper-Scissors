@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper, Scissors</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/android-chrome-512x512.png"
+      type="image/x-icon"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Italiana&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Cursive Fonts: "Rancho" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header Section & Score Board -->
+    <section class="header-section">
+      <div class="header-container">
+        <div class="logo-container">
+          <p class="intro-title">Isioma's Playhouse Presents...</p>
+          <p class="logo-wrapper">
+            <span class="title">ROCK</span> <br />
+            <span class="title title-paper">PAPER</span> <br />
+            <span class="title title-scissors">SCISSORS</span>
+          </p>
+        </div>
+
+        <div class="score-board">
+          <p class="wins-tag">WINS</p>
+          <span class="wins-score" id="js-wins"></span>
+        </div>
+
+        <div class="score-board">
+          <p class="losses-tag">LOSSES</p>
+          <span class="losses-score" id="js-losses"></span>
+        </div>
+
+        <div class="score-board">
+          <p class="ties-tag">TIES</p>
+          <span class="ties-score" id="js-ties"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Game Section : Loaded Game -->
+
+    <section id="js-game-section" class="game-section show">
+      <div class="first-section">
+        <img id="js-paper" src="./assets/paper.png" alt="paper" />
+        <img id="js-scissors" src="./assets/scissors.png" alt="scissors" />
+      </div>
+
+      <div>
+        <img id="js-rock" src="./assets/rock.png" alt="rock" />
+      </div>
+    </section>
+
+    <!-- Played Game -->
+
+    <section id="js-active-game-section" class="active-game-section">
+      <div class="player-one-section">
+        <p class="player-one-message">YOU PICKED</p>
+        <span id="js-player-one-move"></span>
+      </div>
+
+      <div class="message-display-section">
+        <p class="game-message-one" id="js-message-one"></p>
+        <p class="game-message" id="js-message"></p>
+        <button id="js-play-again-btn">PLAY AGAIN</button>
+        <button id="js-reset-score-btn">RESET SCORE</button>
+        <button id="js-auto-play" class="auto-play">AUTO PLAY</button>
+      </div>
+
+      <div class="player-two-section">
+        <p class="player-two-message">PLAYHOUSE PICKED</p>
+        <span id="js-player-two-move"></span>
+      </div>
+    </section>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

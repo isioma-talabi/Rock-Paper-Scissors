@@ -1,0 +1,195 @@
+body {
+  margin: 0px;
+  height: 100vh;
+  background-color: #7d2e68;
+
+  /* background-image: linear-gradient(to bottom, #1e3655, #15173b, #15173b); */
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.header-section {
+  display: flex;
+  justify-content: center;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  border: 3px solid #606e85;
+  padding: 0px 20px;
+  color: white;
+  width: 1000px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.logo-container {
+  justify-self: start;
+}
+
+.intro-title {
+  font-family: "Rancho", sans-serif;
+  font-size: 40px;
+  margin-bottom: 0;
+  color: #f0ec57;
+}
+
+.logo-wrapper {
+  margin: 0;
+}
+
+.title {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  /* color: #ff9b85; */
+}
+
+.title-paper {
+  position: relative;
+  bottom: 10px;
+}
+
+.title-scissors {
+  position: relative;
+  bottom: 20px;
+}
+
+/* Score Styling */
+
+.score-board {
+  text-align: center;
+  align-items: center;
+  background-color: white;
+  color: #18a999;
+  width: 150px;
+  height: 120px;
+  border-radius: 10px;
+}
+
+.wins-tag,
+.losses-tag,
+.ties-tag {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.wins-score,
+.losses-score,
+.ties-score {
+  font-size: 50px;
+  font-weight: 800;
+  color: #1e3655;
+  transition: ease-in-out 0.5s;
+}
+
+/* Game Section Styles */
+
+.game-section {
+  display: grid;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+img {
+  width: 350px;
+  cursor: pointer;
+  transition: ease-in 0.8s;
+}
+
+img:hover {
+  transform: scale(1.2);
+}
+
+/* Active Game Section Styles */
+
+.active-game-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+  color: white;
+  margin-top: 100px;
+}
+
+.player-one-section {
+  justify-self: end;
+}
+
+.player-two-section {
+  justify-self: start;
+}
+
+.player-one-message,
+.player-two-message {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.game-message-one {
+  margin-bottom: 0px;
+  font-size: 40px;
+  font-family: "Rancho", sans-serif;
+  color: #f0ec57;
+}
+
+.game-message {
+  font-weight: 700;
+  font-size: 60px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #f0ec57;
+  font-family: "Rancho", sans-serif;
+}
+
+button {
+  width: 350px;
+  padding: 20px;
+  font-size: 20px;
+  color: #7d2e68;
+  font-weight: 500;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: ease-in-out 0.6s;
+}
+
+button:hover {
+  background-color: #f0ec57;
+}
+
+.auto-play {
+  background-color: #18a999;
+  transition: ease-in 0.5s;
+}
+
+.auto-play:hover {
+  color: #7d2e68;
+  background-color: #f0ec57;
+}
+
+/* Transitions */
+/* Both sections are positioned similarly */
+.game-section,
+.active-game-section {
+  transition: opacity 0.4s ease-in, transform 0.8s ease-in;
+  opacity: 0;
+  transform: translateY(50px); /* starts slightly below */
+  pointer-events: none; /* prevent interaction when hidden */
+  position: absolute; /* stack on top of each other */
+  width: 100%;
+}
+
+/* When visible */
+.game-section.show,
+.active-game-section.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
