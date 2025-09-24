@@ -97,7 +97,7 @@ body {
 }
 
 img {
-  width: 300px;
+  width: 250px;
   cursor: pointer;
   transition: ease-in 0.8s;
 }
