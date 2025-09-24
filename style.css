@@ -2,6 +2,7 @@ body {
   margin: 0px;
   height: 100vh;
   background-color: #7d2e68;
+  overflow-y: hidden;
 
   /* background-image: linear-gradient(to bottom, #1e3655, #15173b, #15173b); */
   font-family: "Barlow Semi Condensed", sans-serif;
@@ -96,7 +97,7 @@ body {
 }
 
 img {
-  width: 350px;
+  width: 300px;
   cursor: pointer;
   transition: ease-in 0.8s;
 }
